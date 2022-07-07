@@ -50,9 +50,24 @@ const editBook = (req, res) => {
   res.status(200).json({ success: true, title: newTitle });
 };
 
+const deleteBook = (req, res) => {
+  const { id } = req.params;
+  const book = books.find((book) => book.id === Number(id));
+  if (!book) {
+    return res
+      .status(404)
+      .json({ success: false, msg: `no book with id ${id}` });
+  }
+  books.filter((book) => book.id !== Number(req.params.id));
+  return res
+    .status(200)
+    .json({ success: true, msg: `Book with id ${id} deleted` });
+};
+
 module.exports = {
   getAllBooks,
   createBook,
   getSingleBook,
   editBook,
+  deleteBook,
 };
