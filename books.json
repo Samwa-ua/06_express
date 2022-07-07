@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Harry Potter and the Philosopher's stone",
+    "reviews": [
+      {
+        "id": 1,
+        "comment": "Nice"
+      }
+    ]
+  }
+]
