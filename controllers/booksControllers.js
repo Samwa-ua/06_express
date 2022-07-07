@@ -1,6 +1,4 @@
-const e = require('express');
 const books = require('../books.json');
-const isExist = require('../middlewares/isExist');
 
 const getAllBooks = (req, res) => {
   res.status(200).json(books);
