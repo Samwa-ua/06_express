@@ -3,16 +3,13 @@ const router = express.Router();
 const {
   getAllBooks,
   createBook,
-  createReview,
+  getSingleBook,
+  editBook,
 } = require('../controllers/booksControllers');
-
-// import * as bookController from '../controllers/bookController.js';
-
-// Middleware
-// router.use('/:id', bookController.findBookMiddleware);
 
 router.route('/').get(getAllBooks);
 router.route('/').post(createBook);
-// router.route('/').post(createReview);
+router.route('/:id').get(getSingleBook);
+router.route('/:id').put(editBook);
 
 module.exports = router;
