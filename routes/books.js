@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { getAllBooks, getOneBook } = require('../controllers/booksControllers');
+const {
+  getAllBooks,
+  createBook,
+  createReview,
+} = require('../controllers/booksControllers');
 
 // import * as bookController from '../controllers/bookController.js';
 
@@ -8,5 +12,7 @@ const { getAllBooks, getOneBook } = require('../controllers/booksControllers');
 // router.use('/:id', bookController.findBookMiddleware);
 
 router.route('/').get(getAllBooks);
+router.route('/').post(createBook);
+// router.route('/').post(createReview);
 
 module.exports = router;

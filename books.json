@@ -8,5 +8,15 @@
         "comment": "Nice"
       }
     ]
+  },
+  {
+    "id": 2,
+    "title": "HeadFirst JavaScript",
+    "reviews": [
+      {
+        "id": 2,
+        "comment": "Good"
+      }
+    ]
   }
 ]
